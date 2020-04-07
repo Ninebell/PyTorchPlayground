@@ -12,10 +12,10 @@ class MLP(nn.Module):
         super(MLP, self).__init__()
 
         # 모델의 레이어들 생성
-        self.fc1 = nn.Linear(28*28, 5050)
-        self.fc2 = nn.Linear(5050, 5050)
-        self.fc3 = nn.Linear(5050, 5050)
-        self.fc4 = nn.Linear(5050, 10)
+        self.fc1 = nn.Linear(28*28, 256)
+        self.fc2 = nn.Linear(256, 512)
+        self.fc3 = nn.Linear(512, 1024)
+        self.fc4 = nn.Linear(1024, 10)
 
         # 순전파 과정
     def forward(self, x):
